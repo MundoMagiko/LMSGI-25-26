@@ -1,0 +1,28 @@
+img {
+  border: 5px solid blueviolet; /*Para darle un borde a la imagen*/
+}
+ol, ul {
+  text-align: center;        /* centra el texto de las listas */
+  list-style-position: inside; /* hace que los números o puntos estén dentro del texto */
+  display: inline-block;     /* hace que la lista se centre en el contenedor */
+}
+body {
+  text-align: center; /* centra el bloque <ol> o <ul> */
+  font-size: large;
+}
+.contenido {
+  max-width: 800px; /* limita el ancho máximo del texto */
+  margin: 0 auto;   /* centra el bloque horizontalmente */
+  text-align: center; /* centra el texto dentro del contenedor */
+}
+h1{
+  font-family: "Sans-serif","Verdana","Arial";
+  border: 5px solid blueviolet;
+  display: inline-block;
+  background-color: lightblue;
+  margin: 20px;
+  padding: 10px;
+}
+h2{
+  text-decoration: underline;/* La linea decorativa bajo las palabras*/
+}

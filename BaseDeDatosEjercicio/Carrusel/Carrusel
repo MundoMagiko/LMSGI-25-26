@@ -1,0 +1,190 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Juan Manuel Olmo Lobo">
+    <meta name="description" content="Carrusel de dinosaurios sin JavaScript">
+    <title>Carrusel de Dinosaurios</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #c8e6c9; /* verde suave */
+            text-align: center;
+        }
+
+        .barra {
+            width: 100%;
+            display: flex;
+        }
+
+        .boton {
+            flex: 1;
+            padding: 20px;
+            background-color: #81c784;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            border: 1px solid #4caf50;
+        }
+
+        .boton:hover {
+            background-color: #66bb6a;
+        }
+
+        .carrusel {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 40px auto;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 4px solid #4caf50;
+            border-radius: 10px;
+        }
+
+        /* Primera visible por defecto */
+        #slide1 {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        /* Cuando se selecciona */
+        .slide:target {
+            opacity: 1;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="carrusel">
+
+    <!-- SLIDE 1 -->
+    <div class="slide" id="slide1">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide1" class="boton">Anterior</a>
+            <a href="#slide2" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,1">
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide" id="slide2">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide1" class="boton">Anterior</a>
+            <a href="#slide3" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,2">
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide" id="slide3">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide2" class="boton">Anterior</a>
+            <a href="#slide4" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,3">
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide" id="slide4">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide3" class="boton">Anterior</a>
+            <a href="#slide5" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,4">
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide" id="slide5">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide4" class="boton">Anterior</a>
+            <a href="#slide6" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,5">
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="slide" id="slide6">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide5" class="boton">Anterior</a>
+            <a href="#slide7" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,6">
+    </div>
+
+    <!-- SLIDE 7 -->
+    <div class="slide" id="slide7">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide6" class="boton">Anterior</a>
+            <a href="#slide8" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,7">
+    </div>
+
+    <!-- SLIDE 8 -->
+    <div class="slide" id="slide8">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide7" class="boton">Anterior</a>
+            <a href="#slide9" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,8">
+    </div>
+
+    <!-- SLIDE 9 -->
+    <div class="slide" id="slide9">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide8" class="boton">Anterior</a>
+            <a href="#slide10" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,9">
+    </div>
+
+    <!-- SLIDE 10 -->
+    <div class="slide" id="slide10">
+        <div class="barra">
+            <a href="#slide1" class="boton">Primera</a>
+            <a href="#slide9" class="boton">Anterior</a>
+            <a href="#slide10" class="boton">Siguiente</a>
+            <a href="#slide10" class="boton">Última</a>
+        </div>
+        <img src="https://source.unsplash.com/600x400/?dinosaur,10">
+    </div>
+
+</div>
+
+</body>
+</html>
